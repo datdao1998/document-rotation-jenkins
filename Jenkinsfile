@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Login ECR'){
+            steps{
+                sh 'aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPO_NAME}'
+            }
+        }
         stage('Build Dockerfile') { 
             // Build the Docker image using the specified Dockerfile
             steps {
