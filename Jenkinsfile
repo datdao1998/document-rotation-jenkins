@@ -4,11 +4,11 @@ pipeline {
         IMAGE_NAME="document-rotation"
     }
     stages {
-        // stage('Login ECR'){
-        //     steps{
-        //         sh "aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"
-        //     }
-        // }
+        stage('Login ECR'){
+            steps{
+                sh "aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"
+            }
+        }
         stage('Build Dockerfile') { 
             // Build the Docker image using the specified Dockerfile
             steps {
