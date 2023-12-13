@@ -1,14 +1,11 @@
 pipeline {
     agent any
-    environment {
-        REGION = "ap-southeast-1"
-        REPOSITORY_URI = "518505801870.dkr.ecr.ap-southeast-1.amazonaws.com/document-rotation"
-    }
 
     stages {
         stage('Login ECR'){
             steps{
-                sh """aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"""
+                echo """${REGION} -> ${REPOSITORY_URI}"""
+                // sh """aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"""
             }
         }
         stage('Build Dockerfile') { 
