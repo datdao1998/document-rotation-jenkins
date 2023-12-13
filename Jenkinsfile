@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Login ECR'){
             steps{
-                sh "aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"
+                sh "/usr/local/bin/aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"
             }
         }
         stage('Build Dockerfile') { 
