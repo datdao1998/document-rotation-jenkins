@@ -1,17 +1,18 @@
 pipeline {
     agent any
-
+    environment {
+        IMAGE_NAME="document-rotation"
+    }
     stages {
         stage('Login ECR'){
             steps{
-                echo """${REGION} -> ${REPOSITORY_URI}"""
-                // sh """aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"""
+                sh "aws ecr get-login-password --region ${REGION} | sudo docker login --username AWS --password-stdin ${REPOSITORY_URI}"
             }
         }
         stage('Build Dockerfile') { 
             // Build the Docker image using the specified Dockerfile
             steps {
-                sh 'docker build -t document-rotation .'
+                sh "docker build -t ${IMAGE_NAME} ."
             }
         }
         stage('Test') {
