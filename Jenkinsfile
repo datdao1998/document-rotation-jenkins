@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') { 
-            steps {
-                echo 'Building something..'
+        stage('Build Dockerfile') { 
+            // Build the Docker image using the specified Dockerfile
+            script {
+                dockerImage = docker.build('document-rotation', '-f Dockerfile .')
             }
         }
         stage('Test') {

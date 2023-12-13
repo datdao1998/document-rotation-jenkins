@@ -1,5 +1,8 @@
 # Pull the latest version of the Python container.
 FROM python:3.8-slim-buster
+
+COPY app/ /app
+
 # Set the working directory to /app
 WORKDIR /app
 
