@@ -28,3 +28,4 @@ unzip awscliv2.zip
 ![Jenkins Setup](images/global-environments-jenkins.png)
 
 ## 4. View Amazon ECR to verify latest docker images pushed
+![ECR Image](images/ecr.png)
