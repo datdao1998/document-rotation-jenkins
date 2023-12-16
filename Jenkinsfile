@@ -13,6 +13,13 @@ pipeline {
             }
         }
 
+        stage('Check code style'){
+            // Using Flake8 to check code style
+            steps{
+                sh 'flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics'
+            }
+        }
+
         stage('Build and Push Image') { 
             // Build the Docker image using the specified Dockerfile
             // Should use GIT_COMMIT as tag of image
