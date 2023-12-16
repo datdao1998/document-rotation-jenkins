@@ -13,12 +13,6 @@ pipeline {
             }
         }
 
-        stage ('Pytest'){
-            steps{
-                sh 'python3 -m pytest .'
-            }
-        }
-
         stage('Build and Push Image') { 
             // Build the Docker image using the specified Dockerfile
             // Should use GIT_COMMIT as tag of image

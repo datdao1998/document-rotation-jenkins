@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from app.models.model import Model
+from models.model import Model
 
 
 class RotateNet(Model):
