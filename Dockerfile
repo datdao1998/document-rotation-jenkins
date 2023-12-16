@@ -1,6 +1,8 @@
 # Pull the latest version of the Python container.
 FROM python:3.8-slim-buster
 
+RUN apt-get update && apt-get install -y python3-opencv poppler-utils
+
 COPY app/ /app
 
 COPY tests/ /app

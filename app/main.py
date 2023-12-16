@@ -11,18 +11,19 @@ from config import config
 
 app = FastAPI()
 
-@app.get('/health')
+
+@app.get("/health")
 async def check_health():
     return {"Message": "Service is working"}
 
 
-@app.post('/rotate')
+@app.post("/rotate")
 def rotate_document(file: UploadFile):
     rotate_engine = RotateNet(
         model_path=config.rotatenet_path,
         input_size=config.input_size,
         mean=config.mean,
-        std=config.std
+        std=config.std,
     )
 
     stream = file.file.read()
@@ -35,9 +36,4 @@ def rotate_document(file: UploadFile):
 
     image, angle = rotate_engine.execute(image)
 
-    return {
-        "statusCode": 200,
-        "angle": angle
-    }
-
-
+    return {"statusCode": 200, "angle": angle}

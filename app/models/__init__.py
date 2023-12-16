@@ -1,1 +1,0 @@
-from .rotatenet import RotateNet

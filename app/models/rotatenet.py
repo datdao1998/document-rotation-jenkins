@@ -10,7 +10,7 @@ class RotateNet(Model):
         model_path,
         input_size=512,
         mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225]
+        std=[0.229, 0.224, 0.225],
     ):
         """Rotate model for document
 
@@ -18,9 +18,11 @@ class RotateNet(Model):
         :type model_path: str
         :param input_size: Input size of model, defaults to 512
         :type input_size: int, optional
-        :param mean: Default mean to calculate, defaults to [0.485, 0.456, 0.406]
+        :param mean: Default mean to calculate,
+            defaults to [0.485, 0.456, 0.406]
         :type mean: list, optional
-        :param std: Default standard deviation, defaults to [0.229, 0.224, 0.225]
+        :param std: Default standard deviation,
+            defaults to [0.229, 0.224, 0.225]
         :type std: list, optional
         """
         super().__init__(model_path)
