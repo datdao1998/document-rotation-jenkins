@@ -16,7 +16,7 @@ pipeline {
         stage('Check code style'){
             // Using Flake8 to check code style
             steps{
-                sh 'flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics'
+                sh 'python3 -m flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics'
             }
         }
 
