@@ -12,6 +12,7 @@ WORKDIR /app
 
 RUN python -m pip install -r requirements.txt
 
+# pytest
 RUN python -m pytest .
 
 EXPOSE 8000
