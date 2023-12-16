@@ -4,9 +4,9 @@ import numpy as np
 from fastapi import FastAPI, UploadFile
 from PIL import Image
 
-from utils.image_processing import normalize_image
-from models.rotatenet import RotateNet
-from config import config
+from app.utils.image_processing import normalize_image
+from app.models.rotatenet import RotateNet
+from app.config import config
 
 
 app = FastAPI()

@@ -3,17 +3,12 @@ FROM python:3.8-slim-buster
 
 RUN apt-get update && apt-get install -y python3-opencv poppler-utils
 
-COPY app/ /app
-
-COPY tests/ /app
+COPY . .
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR .
 
 RUN python -m pip install -r requirements.txt
-
-# pytest
-RUN python -m pytest .
 
 EXPOSE 8000
 

@@ -4,7 +4,7 @@ Api servermodule test
 import os
 import pytest
 from fastapi.testclient import TestClient
-from main import app
+from app.main import app
 
 
 @pytest.fixture
@@ -23,7 +23,7 @@ def test_check_health(client):
 
 
 def test_rotate(client):
-    fpath = "example/270_sample.jpg"
+    fpath = "app/example/270_sample.jpg"
     assert os.path.isfile(fpath) == True
     with open(fpath, "rb") as f:
         r = client.post(
