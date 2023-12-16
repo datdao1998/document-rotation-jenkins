@@ -13,7 +13,7 @@ app = FastAPI()
 
 @app.get('/health')
 async def check_health():
-    return True
+    return {"Message": "Service is working"}
 
 
 @app.post('/rotate')
@@ -39,8 +39,5 @@ def rotate_document(file: UploadFile):
         "statusCode": 200,
         "angle": angle
     }
-    
-
-
 
 
