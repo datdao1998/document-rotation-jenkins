@@ -24,8 +24,11 @@ unzip awscliv2.zip
 ./aws/install
 ```
 
-## 3. Setup global environments for AWS account 
-![Jenkins Setup](images/global-environments-jenkins.png)
+## 3. Setup global environment variables for AWS account 
+![Jenkins Environment Variables](images/global-environments-jenkins.png)
 
-## 4. View Amazon ECR to verify latest docker images pushed
+## 4. Check Jenkins pipeline
+![Jenkins Pipeline](images/jenkins-pipeline.png)
+
+## 5. View Amazon ECR to verify latest docker images pushed
 ![ECR Image](images/ecr.png)
