@@ -24,6 +24,7 @@ def test_check_health(client):
 
 def test_rotate(client):
     fpath = "example/270_sample.jpg"
+    assert os.path.isfile(fpath) == True
     with open(fpath, "wb") as f:
         r = client.post(
             "/rotate", files={"file": (os.path.basename(fpath), f, "image/jpeg")}
