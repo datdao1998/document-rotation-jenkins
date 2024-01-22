@@ -37,4 +37,4 @@ You can see in [here](https://www.youtube.com/watch?v=8RdHSkOicok)
 ![ECR Image](images/ecr.png)
 
 ## 7. Telegram notify
-![Telegram Bot](images/ecr.png)
+![Telegram Bot](images/telegram-bot.png)
