@@ -24,11 +24,17 @@ unzip awscliv2.zip
 ./aws/install
 ```
 
-## 3. Setup global environment variables for AWS account 
+### 3. Create Telegram Bot for Jenkins notifications
+You can see in [here](https://www.youtube.com/watch?v=8RdHSkOicok)
+
+## 4. Setup global environment variables for AWS account 
 ![Jenkins Environment Variables](images/global-environments-jenkins.png)
 
-## 4. Check Jenkins pipeline
+## 5. Check Jenkins pipeline
 ![Jenkins Pipeline](images/jenkins-pipeline.png)
 
-## 5. View Amazon ECR to verify latest docker images pushed
+## 6. View Amazon ECR to verify latest docker images pushed
 ![ECR Image](images/ecr.png)
+
+## 7. Telegram notify
+![Telegram Bot](images/ecr.png)
