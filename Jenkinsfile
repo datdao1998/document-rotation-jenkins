@@ -30,6 +30,16 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "805816327", "text": "[SUCESSFUL] Ukata api build success !", "disable_notification": false}\' "https://api.telegram.org/bot6830586775:AAFWVCWH58gfAHBAfhrWYouHeucAaDZQ89M/sendMessage"'
+        }
+
+        failure {
+            sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "805816327", "text": "[FAILED] Ukata api build failed !", "disable_notification": false}\' "https://api.telegram.org/bot6830586775:AAFWVCWH58gfAHBAfhrWYouHeucAaDZQ89M/sendMessage"'
+        }
+
+    }
 }
 
 // TODO: Add Telegram bot notification 
