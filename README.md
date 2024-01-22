@@ -10,7 +10,7 @@ You can see setups for Jenkins and Github in [here](https://courses.mlops.vn/mlo
 
 After executing to Jenkins container, we install some Python and some related library
 
-### **Python**
+### **Python3**
 ```
 apt-get install -y python3
 apt-get install -y python3-pip
