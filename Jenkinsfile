@@ -30,6 +30,7 @@ pipeline {
             }
         }
     }
+    // Push notification to Telegram bot
     post {
         success {
             sh 'curl -X POST -H "Content-Type: application/json" -d \'{"chat_id": "805816327", "text": "[SUCESSFUL] Build api build success !", "disable_notification": false}\' "https://api.telegram.org/bot6830586775:AAFWVCWH58gfAHBAfhrWYouHeucAaDZQ89M/sendMessage"'
@@ -41,5 +42,3 @@ pipeline {
 
     }
 }
-
-// TODO: Add Telegram bot notification 
