@@ -1,6 +1,9 @@
 # Description
 Simple project for Document Rotation with CI/CD integrated
 
+# Pipeline
+![DocumentRotationArchitect](images/DocumentPipelineArchitect.png)
+
 # Instruction
 
 ## 1. Setup Jenkins and Github Webhook
