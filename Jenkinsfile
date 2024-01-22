@@ -32,4 +32,4 @@ pipeline {
     }
 }
 
-// TODO: Add Telegram notification 
+// TODO: Add Telegram bot notification 
